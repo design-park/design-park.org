@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio project - Jihyun Park</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="../../common.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="cta cta-secondary">
+      <a href="../../#web-projects" class="button cta-button">Go back</a>
+    </div>
+    <main>
+      <h1>Portfolio</h1>
+      <p>
+        This is the portfolio website which you are currently browsing. In this
+        page I explain the general design decisions that I made and how I made
+        the website responsive and accessible.
+      </p>
+      <h2>General design decisions</h2>
+      <p>
+        The general idea that I followed when I made the homepage of this
+        website was that everything on the screen should be related. That is why
+        each section has by default a height of 80% of the viewport height. The
+        20% remaining are for the user to know that they can scroll down to see
+        more content.
+      </p>
+      <p>
+        To make the hierarchy of the content clear, I used different colors for
+        primary buttons, secondary buttons, section titles and subsection
+        titles. I also added a shadow below the navbar when the user scrolls
+        down to make it clear that the navbar is not part of the content.
+      </p>
+
+      <h2>Responsiveness</h2>
+      <p>It works on mobile.</p>
+
+      <h2>Accessibility</h2>
+      <p>I tried to make the website accessible using different methods.</p>
+      <p>
+        First, I used semantic HTML 5 tags when applicable to make the structure
+        of the content clear to a screen reader.
+      </p>
+      <p>
+        Second, I checked that the colors that I used have sufficently high
+        contrast ratios. I used the
+        <a
+          href="https://webaim.org/resources/contrastchecker/"
+          target="_blank"
+          aria-label="Open the WebAIM contrast checker in a new tab"
+          >WebAIM contrast checker</a
+        >
+        for this.
+      </p>
+      <p>
+        Third, I made sure that the website is usable with a keyboard. I checked
+        that all the links and buttons are reachable using the tab key. I also
+        checked that the focus state is visible. In addition to this, I started
+        the page with the navigation menu, allowing to quickly skip to part of
+        the page that the user is interested in. Even in mobile display, this
+        menu automatically shows when focusing its elements with the tab key.
+      </p>
+      <p>
+        Finally, I used the <code>alt</code>, <code>role</code> and
+        <code>aria-label</code> attributes to clarify the objective of some of
+        the elements in the page.
+      </p>
+      <p>
+        These efforts resulted in a WCAG 2.1 level AA compliance with the
+        <a
+          href="https://accessibe.com/accessscan"
+          target="_blank"
+          aria-label="Open the accessible.com accessibility scan in a new tab"
+          >accessible.com scan</a
+        >.
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+section {
+  --bg: var(--light-bg);
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  overflow: hidden;
+  min-height: 550px;
+  max-height: 800px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.section-content {
+  max-width: calc(800px + 30%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 2rem;
+}
+
+#introduction .section-content {
+  max-width: calc(800px + 10%);
+}
+
+section.strong {
+  --bg: var(--strong-bg);
+  --accent2: var(--accent2-strong);
+}
+
+nav {
+  background-color: var(--strong-bg);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+html:not([data-scroll="0"]) nav {
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+menu {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+#show-menu-button-container > button {
+  margin: 0.5rem 1rem;
+  height: 2rem;
+  width: 3rem;
+  border: 2px solid var(--accent1);
+  border-radius: 4px;
+  background-color: var(--light-bg);
+  font-size: 1.5rem;
+  color: var(--accent1);
+  cursor: pointer;
+}
+
+#show-menu-button-container {
+  display: none;
+}
+
+menu li {
+  list-style: none;
+  height: 3rem;
+}
+
+menu li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  color: var(--accent1);
+}
+
+a.anchor {
+  position: relative;
+  top: -7rem;
+  visibility: hidden;
+}
+
+#introduction .cta-button {
+  padding: 0.8rem 2.2rem;
+}
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-picture > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--title);
+  border: 5px solid var(--accent1);
+}
+
+.profile-text > p {
+  margin-bottom: 0;
+}
+
+.content-item {
+  width: 100%;
+}
+
+#contact-section p {
+  font-size: 1.3rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+#contact-section a {
+  font-size: 2rem;
+  color: var(--accent2);
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+    padding: 4rem 6rem;
+  }
+
+  .section-content {
+    flex-direction: row;
+    gap: 8rem;
+  }
+
+  .content-item {
+    width: fit-content;
+    flex: 1 1 0px;
+  }
+
+  #introduction .cta-button {
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+  }
+
+  #introduction .section-content {
+    gap: 4rem;
+  }
+
+  h1 {
+    text-align: start;
+  }
+
+  hr {
+    height: 10rem;
+    width: 0;
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  menu {
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    height: 3rem;
+    overflow-y: hidden;
+    padding: 0;
+  }
+
+  menu li {
+    text-align: end;
+  }
+
+  menu li a {
+    align-items: end;
+  }
+
+  *[menu-open] menu {
+    height: fit-content;
+  }
+
+  *[menu-open] main {
+    margin-top: 15rem;
+  }
+
+  #show-menu-button-container {
+    display: list-item;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-picture > img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background-color: var(--title);
+    border: 5px solid var(--accent1);
+  }
+
+  h1 {
+    text-align: start;
+  }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jihyun Park</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <menu>
+        <li id="show-menu-button-container">
+          <button onclick="showHideMenu()">≡</button>
+        </li>
+        <li>
+          <a
+            class="button"
+            href="#introduction"
+            onclick="hideMenu()"
+            onfocus="showMenu()"
+            >Introduction</a
+          >
+        </li>
+        <li>
+          <a
+            class="button"
+            href="#mobile-projects"
+            onclick="hideMenu()"
+            onfocus="showMenu()"
+            >Mobile app projects</a
+          >
+        </li>
+        <li>
+          <a
+            class="button"
+            href="#web-projects"
+            onclick="hideMenu()"
+            onfocus="showMenu()"
+            >Web projects</a
+          >
+        </li>
+        <li>
+          <a
+            class="button"
+            href="#contact"
+            onclick="hideMenu()"
+            onfocus="showMenu()"
+            >Contact</a
+          >
+        </li>
+      </menu>
+    </nav>
+    <main>
+      <section id="introduction" class="strong">
+        <div class="introduction-container">
+          <div class="section-content">
+            <div class="profile-picture">
+              <img src="profile.jpg" alt="Picture of Jihyun Park" />
+            </div>
+            <div class="profile-text">
+              <h1>Hello, I'm Jihyun!</h1>
+              <p>
+                I am an aspiring UX designer, hoping to make technology
+                accessible to everyone. This website presents my early
+                experiments.
+              </p>
+            </div>
+          </div>
+          <div class="cta">
+            <a href="#mobile-projects" class="button cta-button"
+              >Discover my projects</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="mobile-projects-section">
+        <a id="mobile-projects" class="anchor"></a>
+        <h2>Mobile app projects</h2>
+        <div class="section-content">
+          <div class="content-item">
+            <h3>Numbee</h3>
+            <p>
+              This is an app to learn French numbers and how to use them in
+              various situations. I made a prototype on Figma to show my vision
+              for the design of the app.
+            </p>
+            <div class="cta cta-secondary">
+              <a href="projects/numbee/" class="button cta-button"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <hr />
+          <div class="content-item">
+            <h3>Giftbox app</h3>
+            <p>
+              The goal of this project is to design a giftbox app, similar to
+              the French apps
+              <a
+                href="https://www.smartbox.com/fr/"
+                target="_blank"
+                aria-label="Open the Smartbox website in a new tab"
+                >Smartbox</a
+              >
+              and
+              <a
+                href="https://wonderbox.fr/"
+                target="_blank"
+                aria-label="Open the Wonderbox website in a new tab"
+                >Wonderbox</a
+              >, but with a redesigned user experience. This is a work in
+              progress.
+            </p>
+            <div class="cta cta-secondary">
+              <a href="#mobile-projects" class="button cta-button"
+                >Learn more</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="web-projects-section" class="strong">
+        <a id="web-projects" class="anchor"></a>
+        <h2>Web projects</h2>
+        <div class="section-content">
+          <div class="content-item">
+            <h3>Portfolio website</h3>
+            <p>
+              This is the website you are visiting. Its goal is to
+              <strong>showcase my personal projects</strong>. It was made in
+              plain HTML/CSS/JS with <strong>responsive design</strong> and
+              <strong>accessibility</strong> in mind.
+            </p>
+            <div class="cta cta-secondary">
+              <a href="projects/portfolio/" class="button cta-button"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <hr />
+          <div class="content-item">
+            <h3>Web development Udemy course</h3>
+            <p>
+              These are some of the Web projects I made while taking the course
+              <a
+                href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+                target="_blank"
+                aria-label="Open the Udemy Complete Web Development Bootcamp course in a new tab"
+                >"The Complete Web Development Bootcamp"</a
+              >
+              (by
+              <a
+                href="https://www.udemy.com/user/4b4368a3-b5c8-4529-aa65-2056ec31f37e/"
+                target="_blank"
+                aria-label="Open the Udemy Angela Yu profile in a new tab"
+                >Dr. Angela Yu</a
+              >) on the Udemy MOOC platform.
+            </p>
+            <div class="cta cta-secondary">
+              <a href="projects/udemy/" class="button cta-button"
+                >See the projects</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact-section">
+        <a id="contact" class="anchor"></a>
+        <h2>Contact me!</h2>
+        <div class="section-content">
+          <div>
+            <p role="heading">
+              You can contact me at the following e-mail address:
+            </p>
+            <p>
+              <a href="mailto:contact@design-park.org"
+                >contact@design-park.org</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.documentElement.dataset.scroll = window.scrollY;
+      document.addEventListener("scroll", () => {
+        document.documentElement.dataset.scroll = window.scrollY;
+      });
+      function showHideMenu() {
+        console.log("clicked");
+        document.body.toggleAttribute("menu-open");
+      }
+      function hideMenu() {
+        document.body.removeAttribute("menu-open");
+      }
+      function showMenu() {
+        document.body.setAttribute("menu-open", "");
+      }
+    </script>
+  </body>
+</html>
