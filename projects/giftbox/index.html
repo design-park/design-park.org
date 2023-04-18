@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giftbox app - Jihyun Park</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="../../common.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="cta cta-secondary">
+      <a href="../../#web-projects" class="button cta-button">Go back</a>
+    </div>
+    <main>
+      <h1>Giftbox app</h1>
+      <p>
+        The goal of this project is to design a giftbox app, similar to the
+        French apps
+        <a
+          href="https://www.smartbox.com/fr/"
+          target="_blank"
+          aria-label="Open the Smartbox website in a new tab"
+          >Smartbox</a
+        >
+        and
+        <a
+          href="https://wonderbox.fr/"
+          target="_blank"
+          aria-label="Open the Wonderbox website in a new tab"
+          >Wonderbox</a
+        >, but with a redesigned user experience. This is a work in progress.
+      </p>
+
+      <h2>Specific problem to solve</h2>
+      <p>
+        Since gift box apps provide a wide variety of activity choices, users
+        find it hard to select what they will do with the box. The existing
+        filtering system that asks users to choose categories is too rigid to
+        match the exact tastes of the users.
+      </p>
+
+      <h2>Proposed solution</h2>
+      <p>
+        It is possible to improve the user's experience for the selection
+        process by asking them to answer a sequence of questions. Based on the
+        answers they give, it is possible to narrow down the selection of
+        activities.
+      </p>
+      <p>
+        The algorithm used to ask the questions could be similar to what the
+        <a
+          href="https://en.akinator.com/"
+          target="_blank"
+          aria-label="Open the Akinator website in a new tab"
+          >Akinator</a
+        >
+        app uses. The goal for the algorithm is to roughly divide by half the
+        number of activities that are left to choose from each time the user
+        answers a question.
+      </p>
+
+      <h2>How is it different from filters?</h2>
+      <p>
+        While basic filters already exists in similar apps, the proposed system
+        is better in the following ways:
+      </p>
+      <ul>
+        <li>
+          The selection process is interactive. In particular, the users do not
+          have to choose themselves what to filter on, the algorithm can choose
+          the best questions depending on the answers already given.
+        </li>
+        <li>
+          Users can answer in an ambiguous ways (eg. not sure, quite okay): it
+          makes it easier to rank the options by giving points to the
+          activities.
+        </li>
+        <li>
+          It is possible to ask questions that would not match any existing
+          filters. For example, the question "Which one would you prefer among
+          these two places?", would not only restrict the selection to
+          activities in the selected place but would give bonus points to
+          activities in similar places.
+        </li>
+        <li>
+          The algorithm can be improved over time by using machine learning
+          techniques. For example, it could learn which questions were the most
+          relevant to select the activity that the users chose in the end and
+          improve the sequence of questions. It could also make connections
+          between types of activities that are different but enjoyed by the same
+          type of people, and therefore suggest alternative activities even if
+          they do not match the answers exactly.
+        </li>
+      </ul>
+
+      <h2>Possible monetization</h2>
+      <p>
+        Some companies could pay to have their activities featured in priority
+        in the app. A limited number of activities could get bonus points in the
+        algorithm, which would make them more likely to be selected (provided
+        that they match the user's preferences to some extent). A "featured" tag
+        could be added to these activities for more transparency.
+      </p>
+      <p>
+        Companies could also make limited time offers to get their activities
+        featured in a specific "special offers" section of the app.
+      </p>
+    </main>
+  </body>
+</html>

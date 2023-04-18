@@ -28,3 +28,7 @@ h2 {
 .gallery img {
   height: 300px;
 }
+
+li {
+  margin-bottom: 0.5rem;
+}
